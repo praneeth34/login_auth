@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
-const ShortUrl = require("./models/shortUrl");
 
 const app = express();
 
