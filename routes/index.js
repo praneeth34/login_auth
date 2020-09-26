@@ -3,7 +3,7 @@ const router = express.Router();
 const { ensureAuthenticated } = require('../config/checkAuth')
 
 //------------ Welcome Route ------------//
-router.get('/', (req, res) => {
+router.get('/',ensureAuthenticated, (req, res) => {
     const shortUrls = await ShortUrl.find();
   res.render('welcome', { shortUrls: shortUrls });
     
